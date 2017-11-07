@@ -15,10 +15,10 @@ public class Dia {
         int dia, mes, ano;
 
         do {
-            System.out.println("Introduce el día: ");
-            dia = teclado.nextInt();
+            System.out.println("Introduce un año: ");
+            ano = teclado.nextInt();
 
-        } while (dia < 1 || dia > 31);
+        } while (ano < 1904);
 
         do {
             System.out.println("Introduce el mes: ");
@@ -27,10 +27,34 @@ public class Dia {
         } while (mes < 1 || mes > 12);
 
         do {
-            System.out.println("Introduce un año a partir del 1904: ");
-            ano = teclado.nextInt();
+            System.out.println("Introduce el día: ");
+            dia = teclado.nextInt();
 
-        } while (ano < 1904);
+        } while (dia < 1 || dia > 31);
+
+        if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+            while (dia < 1 || dia > 30) {
+                System.out.println("El día introducido no existe, LOL, vuelve a probar.");
+                System.out.println("Introduce el día: ");
+                dia = teclado.nextInt();
+            }
+        }
+
+        if (mes == 2) {
+            if (ano % 4 == 0) {
+                while (dia < 1 || dia > 29) {
+                    System.out.println("El día introducido no existe, LOL, vuelve a probar.");
+                    System.out.println("Introduce el día: ");
+                    dia = teclado.nextInt();
+                }
+            } else {
+                while (dia < 1 || dia > 28) {
+                    System.out.println("El día introducido no existe, LOL, vuelve a probar.");
+                    System.out.println("Introduce el día: ");
+                    dia = teclado.nextInt();
+                }
+            }
+        }
 
         if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10) {
             if (dia == 31) {
@@ -57,14 +81,14 @@ public class Dia {
         }
 
         if (mes == 2) {
-            if (ano / 4 == 0) {
-                if (dia == 28) {
+            if (ano % 4 == 0) {
+                if (dia == 29) {
                     System.out.println("\n La próxima fecha será: " + 1 + " / " + (mes + 1) + " / " + ano);
                 } else {
                     System.out.println("\n La próxima fecha será: " + (dia + 1) + " / " + mes + " / " + ano);
                 }
             } else {
-                if (dia == 29) {
+                if (dia == 28) {
                     System.out.println("\n La próxima fecha será: " + 1 + " / " + (mes + 1) + " / " + ano);
                 } else {
                     System.out.println("\n La próxima fecha será: " + (dia + 1) + " / " + mes + " / " + ano);

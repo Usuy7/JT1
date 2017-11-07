@@ -16,10 +16,10 @@ public class Ccifras {
         int contador = 0;
 
         System.out.println("Introduce un número entero: ");
-        int n = teclado.nextInt();
+        int num = teclado.nextInt();
 
-        while (n != 0) {
-            n = n / 10;
+        while (num != 0) {
+            num = num / 10;
             contador++;
         }
         System.out.println("El número tiene: " + contador + " cifras");
