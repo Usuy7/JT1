@@ -1,4 +1,4 @@
-package P2;
+package Operadores;
 
 import java.util.Scanner;
 
@@ -6,6 +6,7 @@ import java.util.Scanner;
  *
  * @author AlumMati
  */
+// Algoritmo para comprobar si un número es primo.
 public class Primo1 {
 
     public Primo1() {
