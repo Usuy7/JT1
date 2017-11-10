@@ -13,7 +13,7 @@ public class Divisors_Sum {
 
         Scanner tec = new Scanner(System.in);
 
-        int suma = 1;
+        int suma = 0;
         String numbers = "";
 
         System.out.print("Introduce un número: ");
@@ -24,7 +24,7 @@ public class Divisors_Sum {
             num = tec.nextInt();
         }
 
-        for (int i = 2; i < num; i++) {
+        for (int i = 1; i < num; i++) {
             if (num % i == 0) {
                 suma += i;
                 numbers = numbers + " " + Integer.toString(i);
