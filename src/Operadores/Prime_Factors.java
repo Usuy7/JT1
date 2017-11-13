@@ -17,6 +17,7 @@ public class Prime_Factors {
         Scanner tec = new Scanner(System.in);
 
         int num, div = 2;
+        int cont = 0;
 
         System.out.print("Introduce un número: ");
         num = tec.nextInt();
@@ -26,16 +27,18 @@ public class Prime_Factors {
             num = tec.nextInt();
         }
 
+        System.out.print(num + " = ");
+        
         for (int i = 0; i <= num; i++) {
             if (num % div == 0) {
-                System.out.print(div + " ");
+                System.out.print(div + " exp ");
                 num = num / div;
             } else {
                 div++;
             }
         }
+        
     }
-
     public static void main(String[] args) {
         new Prime_Factors();
     }
