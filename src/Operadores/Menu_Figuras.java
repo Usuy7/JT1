@@ -94,7 +94,7 @@ public class Menu_Figuras {
 
         area = base * altura / 2;
         System.out.println("El área del triángulo es: " + area);
-        
+
         return area;
 
     }
