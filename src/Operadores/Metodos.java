@@ -27,25 +27,22 @@ public class Metodos {
         }
         return num;
     }
-    
-    public static int PrimosNot(int num) {
 
-        while (num <= 0) {
-            System.out.println("Error");
-            num = tec.nextInt();
+    public static boolean esPrimo(int numero) {
+        int contador = 2;
+        boolean primo = true;
+        while ((primo) && (numero != contador)) {
+            if (numero % contador == 0) {
+                primo = false;
+            }
+            contador++;
+            if (numero % 2 == 0) {
+                return false;
+            }
         }
-        return num;
+        return primo;
     }
-    
-    public static int Primos(int num) {
 
-        while (num <= 0) {
-            System.out.println("Error");
-            num = tec.nextInt();
-        }
-        return num;
-    }
-    
     public static int CuantasCifras(int num) {
 
         int contador = 0;
@@ -75,16 +72,6 @@ public class Metodos {
                 }
             }
         }
-        
-        /*
-        int num = 85;
-        String num1 = "";
-        
-        Integer.toString(num);
-        
-        num1 = Metodos.DescomponerFP(num);
-        System.out.println(num1);
-        */
         return numbers;
     }
 }

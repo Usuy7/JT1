@@ -13,25 +13,16 @@ public class Primo1 {
 
         Scanner teclado = new Scanner(System.in);
 
-        int n, c = 2;
+        int num;
 
         System.out.print("Introduce un numero positivo: ");
-        n = teclado.nextInt();
+        num = teclado.nextInt();
+        num = Metodos.MayorCero(num);
+        
 
-        while (n < 0) {
-            System.out.print("El número no es valido, vuelve a introducirlo: ");
-            n = teclado.nextInt();
-        }
-
-        while (n % c != 0) {
-            c = c + 1;
-        }
-
-        if (n == c) {
-            System.out.print("Es un numero primo ");
-        } else {
-            System.out.print("No es un numero primo ");
-        }
+        boolean primo = (num != 0);
+        primo = Metodos.esPrimo(num);
+        System.out.println(primo);
 
     }
 
