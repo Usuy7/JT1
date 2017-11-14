@@ -11,7 +11,7 @@ Escribir un programa que calcule la longitud y el área de las siguientes figura
 rectángulo, cuadrado y triángulo. Para ello, primero pediremos de qué figura se desean calcular estos
 dos datos
  */
-public class Menu_Figuras {
+public final class Menu_Figuras {
 
     static Scanner tec = new Scanner(System.in);
     static double base;
