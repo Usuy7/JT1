@@ -13,7 +13,7 @@ public class Metodos {
     public static int MayorCero(int num) {
 
         while (num <= 0) {
-            System.out.println("Error");
+            System.out.println("Error, introduce un número positivo");
             num = tec.nextInt();
         }
         return num;
@@ -22,7 +22,7 @@ public class Metodos {
     public static double MayorCero(double num) {
 
         while (num <= 0) {
-            System.out.println("Error");
+            System.out.println("Error, introduce un número positivo");
             num = tec.nextDouble();
         }
         return num;

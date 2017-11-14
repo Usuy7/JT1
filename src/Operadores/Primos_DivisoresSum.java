@@ -40,6 +40,9 @@ public final class Primos_DivisoresSum {
             while (primo) {
                 System.out.println("Introduce un número no primo: ");
                 num1 = tec.nextInt();
+                num1 = Metodos.MayorCero(num1);
+                primo = (num1 != 0);
+                primo = Metodos.esPrimo(num1);
             }
         }
 
@@ -50,9 +53,12 @@ public final class Primos_DivisoresSum {
         primo2 = Metodos.esPrimo(num2);
 
         if (primo2) {
-            while (primo2 == true) {
+            while (primo2) {
                 System.out.println("Introduce un número no primo: ");
                 num2 = tec.nextInt();
+                num2 = Metodos.MayorCero(num2);
+                primo2 = (num2 != 0);
+                primo2 = Metodos.esPrimo(num2);
             }
         }
     }
@@ -62,7 +68,7 @@ public final class Primos_DivisoresSum {
     }
 
     public void Sum2() {
-        System.out.println("\nLa suma de los divisores de " + num2 + " es: " + (sum2 = Metodos.SumaDivisores(num2)));
+        System.out.println("La suma de los divisores de " + num2 + " es: " + (sum2 = Metodos.SumaDivisores(num2)));
     }
 
     public void SumTotal() {
