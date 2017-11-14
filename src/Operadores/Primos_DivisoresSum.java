@@ -1,4 +1,5 @@
 package Operadores;
+
 import java.util.Scanner;
 
 /**
@@ -10,28 +11,64 @@ Desarrolla un algoritmo y codifícalo en java que:
 a. Lea 2 números no primos, A y B
 b. Calcule mediante una función la suma de los divisores de cada número.
 c. Y visualice en el programa principal la suma de los divisores de los 2.
-*/
-public class Primos_DivisoresSum {
-    
-    static Scanner tec = new Scanner (System.in);
+ */
+public final class Primos_DivisoresSum {
+
+    static Scanner tec = new Scanner(System.in);
     static int num1;
+    static int sum1;
     static int num2;
-    
-    public Primos_DivisoresSum (){
+    static int sum2;
+    static int sumTotal;
+
+    public Primos_DivisoresSum() {
         Leer();
+        Sum1();
+        Sum2();
+        SumTotal();
     }
-    
-    public void Leer (){
-        
-        System.out.println("Introduce un número: ");
+
+    public void Leer() {
+
+        System.out.print("Introduce un número: ");
         num1 = tec.nextInt();
         num1 = Metodos.MayorCero(num1);
-        System.out.println("Introduce otro número: ");
+        boolean primo = (num1 != 0);
+        primo = Metodos.esPrimo(num1);
+
+        if (primo) {
+            while (primo) {
+                System.out.println("Introduce un número no primo: ");
+                num1 = tec.nextInt();
+            }
+        }
+
+        System.out.print("Introduce otro número: ");
         num2 = tec.nextInt();
-        num2 = Metodos.MayorCero(num1);
-        
+        num2 = Metodos.MayorCero(num2);
+        boolean primo2 = (num2 != 0);
+        primo2 = Metodos.esPrimo(num2);
+
+        if (primo2) {
+            while (primo2 == true) {
+                System.out.println("Introduce un número no primo: ");
+                num2 = tec.nextInt();
+            }
+        }
     }
-    
+
+    public void Sum1() {
+        System.out.println("\nLa suma de los divisores de " + num1 + " es: " + (sum1 = Metodos.SumaDivisores(num1)));
+    }
+
+    public void Sum2() {
+        System.out.println("\nLa suma de los divisores de " + num2 + " es: " + (sum2 = Metodos.SumaDivisores(num2)));
+    }
+
+    public void SumTotal() {
+        System.out.println("La suma conjunta de los divisores de ambos es: " + (sumTotal = sum1 + sum2));
+    }
+
     public static void main(String[] args) {
         new Primos_DivisoresSum();
     }

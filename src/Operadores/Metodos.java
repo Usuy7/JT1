@@ -28,19 +28,31 @@ public class Metodos {
         return num;
     }
 
-    public static boolean esPrimo(int numero) {
+    public static boolean esPrimo(int num) {
         int contador = 2;
         boolean primo = true;
-        while ((primo) && (numero != contador)) {
-            if (numero % contador == 0) {
+        while ((primo) && (num != contador)) {
+            if (num % contador == 0) {
                 primo = false;
             }
             contador++;
-            if (numero % 2 == 0) {
+            if (num % 2 == 0) {
                 return false;
             }
         }
         return primo;
+    }
+
+    public static int SumaDivisores(int num) {
+
+        int suma = 0;
+
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                suma += i;
+            }
+        }
+        return suma;
     }
 
     public static int CuantasCifras(int num) {
