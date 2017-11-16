@@ -7,11 +7,11 @@ import java.util.Scanner;
  * @author AlumMati
  */
 
-public class DescompFp {
+public class PrimeFactors {
     
     // Algoritmo que lea un número entero y lo descomponga en factores primos.
 
-    public DescompFp() {
+    public PrimeFactors() {
 
         Scanner teclado = new Scanner(System.in);
 
@@ -27,6 +27,6 @@ public class DescompFp {
     }
 
     public static void main(String[] args) {
-        new DescompFp();
+        new PrimeFactors();
     }
 }

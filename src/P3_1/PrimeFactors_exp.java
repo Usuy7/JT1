@@ -11,9 +11,9 @@ import java.util.Scanner;
 Realiza un algoritmo que visualice en pantalla los factores primos de N 
 en la forma “ A exp B ” siendo A el factor primo y B el exponente.
  */
-public class Prime_Factors {
+public class PrimeFactors_exp {
 
-    public Prime_Factors() {
+    public PrimeFactors_exp() {
 
         Scanner tec = new Scanner(System.in);
 
@@ -46,6 +46,6 @@ public class Prime_Factors {
     }
 
     public static void main(String[] args) {
-        new Prime_Factors();
+        new PrimeFactors_exp();
     }
 }
