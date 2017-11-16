@@ -21,17 +21,13 @@ public class Prime_Factors {
 
         System.out.print("Introduce un número: ");
         num = tec.nextInt();
-
-        while (num <= 0) {
-            System.out.print("El número introducido no es válido, introduce otro: ");
-            num = tec.nextInt();
-        }
+        num = Metodos.MayorCero(num);
 
         System.out.print(num + " = ");
         
         for (int i = 0; i <= num; i++) {
             if (num % div == 0) {
-                System.out.print(div + " exp ");
+                System.out.print(div + " ");
                 num = num / div;
             } else {
                 div++;
