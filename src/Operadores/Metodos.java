@@ -22,7 +22,7 @@ public class Metodos {
     public static double MayorCero(double num) {
 
         while (num <= 0) {
-            System.out.println("Error, introduce un número positivo");
+            System.out.print("Error, introduce un número mayor que cero: ");
             num = tec.nextDouble();
         }
         return num;
@@ -36,9 +36,6 @@ public class Metodos {
                 primo = false;
             }
             contador++;
-            if (num % 2 == 0) {
-                return false;
-            }
         }
         return primo;
     }

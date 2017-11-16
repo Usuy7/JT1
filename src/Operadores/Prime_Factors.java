@@ -35,7 +35,7 @@ public class Prime_Factors {
                         num = num / div;
                         exp++;
                     }
-                    System.out.println(div + " exp " + exp);
+                    System.out.print(div + " exp " + exp);
                 } else {
                     div++;
                     exp = 0;

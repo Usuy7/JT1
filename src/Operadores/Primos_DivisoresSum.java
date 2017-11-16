@@ -38,7 +38,7 @@ public final class Primos_DivisoresSum {
 
         if (primo) {
             while (primo) {
-                System.out.println("Introduce un número no primo: ");
+                System.out.print("Introduce un número no primo: ");
                 num1 = tec.nextInt();
                 num1 = Metodos.MayorCero(num1);
                 primo = (num1 != 0);
@@ -54,7 +54,7 @@ public final class Primos_DivisoresSum {
 
         if (primo2) {
             while (primo2) {
-                System.out.println("Introduce un número no primo: ");
+                System.out.print("Introduce un número no primo: ");
                 num2 = tec.nextInt();
                 num2 = Metodos.MayorCero(num2);
                 primo2 = (num2 != 0);
