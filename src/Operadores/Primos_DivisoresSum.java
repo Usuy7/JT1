@@ -1,5 +1,6 @@
 package Operadores;
 
+import Metodos.Metodos;
 import java.util.Scanner;
 
 /**
@@ -12,20 +13,21 @@ a. Lea 2 números no primos, A y B
 b. Calcule mediante una función la suma de los divisores de cada número.
 c. Y visualice en el programa principal la suma de los divisores de los 2.
  */
-public final class Primos_DivisoresSum {
 
-    static Scanner tec = new Scanner(System.in);
-    static int num1;
-    static int sum1;
-    static int num2;
-    static int sum2;
-    static int sumTotal;
+public final class Primos_DivisoresSum {
 
     public Primos_DivisoresSum() {
         Leer();
     }
 
     public void Leer() {
+
+        Scanner tec = new Scanner(System.in);
+        int num1;
+        int sum1;
+        int num2;
+        int sum2;
+        int sumTotal;
 
         System.out.print("Introduce un número: ");
         num1 = tec.nextInt();

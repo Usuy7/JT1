@@ -1,5 +1,6 @@
 package Operadores;
 
+import Metodos.Metodos;
 import java.util.Scanner;
 
 /**
