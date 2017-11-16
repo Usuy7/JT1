@@ -1,4 +1,5 @@
 package Metodos;
+
 import java.util.Scanner;
 
 /**
@@ -12,8 +13,26 @@ public class Metodos {
     public static int MayorCero(int num) {
 
         while (num <= 0) {
-            System.out.println("Error, introduce un número positivo");
+            System.out.print("Error, introduce un número mayor que cero: ");
             num = tec.nextInt();
+        }
+        return num;
+    }
+
+    public static long MayorCero(long num) {
+
+        while (num <= 0) {
+            System.out.print("Error, introduce un número mayor que cero: ");
+            num = tec.nextLong();
+        }
+        return num;
+    }
+
+    public static float MayorCero(float num) {
+
+        while (num <= 0) {
+            System.out.print("Error, introduce un número mayor que cero: ");
+            num = tec.nextFloat();
         }
         return num;
     }
@@ -28,8 +47,10 @@ public class Metodos {
     }
 
     public static boolean esPrimo(int num) {
+
         int contador = 2;
         boolean primo = true;
+
         while ((primo) && (num != contador)) {
             if (num % contador == 0) {
                 primo = false;
@@ -69,17 +90,23 @@ public class Metodos {
         int c = 2;
         String numbers = "";
 
-        if (num > 1) {
+        System.out.print(num + " = 1");
+
+        if (num == 1) {
             System.out.print("1");
-            for (int i = 0; i <= num; i++) {
-                if (num % c == 0) {
-                    numbers = numbers + " * " + Integer.toString(c);
-                    num = num / c;
-                } else {
-                    c++;
+        } else {
+            while (num != 1) {
+                for (int i = 0; i <= num; i++) {
+                    if (num % c == 0) {
+                        numbers = numbers + " * " + Integer.toString(c);
+                        num = num / c;
+                    } else {
+                        c++;
+                    }
                 }
             }
         }
+
         return numbers;
     }
 }

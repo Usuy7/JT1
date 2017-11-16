@@ -1,5 +1,5 @@
 package Operadores;
-
+import Metodos.Metodos;
 import java.util.Scanner;
 
 /**
@@ -15,30 +15,15 @@ public class DescompFp {
 
         Scanner teclado = new Scanner(System.in);
 
-        int num = 0, num2 = 0, c = 2;
+        int num;
+        String number = "";
 
         System.out.print("Introduce un número: ");
         num = teclado.nextInt();
-        num2 = num;
-
-        if (num > 1) {
-
-            System.out.print(num2 + " = ");
-
-            System.out.print("1");
-
-            for (int i = 0; i <= num; i++) {
-
-                if (num % c == 0) {
-                    System.out.print(" * " + c);
-                    num = num / c;
-
-                } else {
-                    c++;
-                }
-            }
-        }
-        System.out.println("");
+        num = Metodos.MayorCero(num);
+        number = Integer.toString(num);
+        number = Metodos.DescomponerFP(num);
+        System.out.println(number);
     }
 
     public static void main(String[] args) {
