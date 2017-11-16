@@ -1,4 +1,4 @@
-package Operadores;
+package P3;
 
 import Metodos.Metodos;
 import java.util.Scanner;
