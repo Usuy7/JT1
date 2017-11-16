@@ -8,9 +8,9 @@ import java.util.Scanner;
 
 // Escribir un algoritmo que pida un número entero y diga cuántas cifras tiene ese número.
 
-public class Ccifras {
+public class CuentaCifras {
 
-    public Ccifras() {
+    public CuentaCifras() {
         Scanner teclado = new Scanner(System.in);
 
         int contador = 0;
@@ -27,6 +27,6 @@ public class Ccifras {
 
     public static void main(String[] args) {
         
-        new Ccifras();
+        new CuentaCifras();
     }
 }
