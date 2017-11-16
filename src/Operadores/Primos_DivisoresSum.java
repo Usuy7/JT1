@@ -23,9 +23,6 @@ public final class Primos_DivisoresSum {
 
     public Primos_DivisoresSum() {
         Leer();
-        Sum1();
-        Sum2();
-        SumTotal();
     }
 
     public void Leer() {
@@ -61,17 +58,9 @@ public final class Primos_DivisoresSum {
                 primo2 = Metodos.esPrimo(num2);
             }
         }
-    }
 
-    public void Sum1() {
         System.out.println("\nLa suma de los divisores de " + num1 + " es: " + (sum1 = Metodos.SumaDivisores(num1)));
-    }
-
-    public void Sum2() {
         System.out.println("La suma de los divisores de " + num2 + " es: " + (sum2 = Metodos.SumaDivisores(num2)));
-    }
-
-    public void SumTotal() {
         System.out.println("La suma conjunta de los divisores de ambos es: " + (sumTotal = sum1 + sum2));
     }
 
