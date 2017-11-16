@@ -8,20 +8,30 @@ import java.util.Scanner;
  */
 public class Factorial_Number {
 
+    static Scanner tec = new Scanner(System.in);
+    
     public Factorial_Number() {
+        Leer();
+    }
 
-        Scanner tec = new Scanner(System.in);
+    private void Leer() {
 
-        double num, factorial = 1;
+        long num, factorial;
 
         System.out.print("Introduce un número: ");
         num = tec.nextInt();
-
+        System.out.println("El factorial del número es: " + (factorial = Factorial(num)));
+    }
+    
+    private long Factorial(long num){
+        
+        int fact = 1;
+        
         for (int i = 1; i <= num; i++) {
-            factorial *= i;
+            fact *= i;
         }
-
-        System.out.println(factorial);
+        
+        return fact;  
     }
 
     public static void main(String[] args) {

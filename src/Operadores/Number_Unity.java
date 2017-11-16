@@ -19,7 +19,7 @@ public class Number_Unity {
 
         Scanner tec = new Scanner(System.in);
 
-        int num, unity = 0, cont = 1;
+        long num, unity = 0, cont = 1;
 
         System.out.print("Introduce un número: ");
         num = tec.nextInt();

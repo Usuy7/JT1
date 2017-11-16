@@ -11,7 +11,7 @@ Escribir un programa que calcule la longitud y el área de las siguientes figura
 rectángulo, cuadrado y triángulo. Para ello, primero pediremos de qué figura se desean calcular estos
 dos datos
  */
-public final class Menu_Figuras {
+public class Menu_Figuras {
 
     static Scanner tec = new Scanner(System.in);
     static double base;
@@ -43,13 +43,11 @@ public final class Menu_Figuras {
             switch (opc) {
                 case 1:
                     Rectangulo();
-                    System.out.println("\nEl área del rectángulo es: " + area);
-                    System.out.println("La longitud del rectángulo es: " + longitud);
+
                     break;
                 case 2:
                     Cuadrado();
-                    System.out.println("\nEl área del rectángulo es: " + area);
-                    System.out.println("La longitud del rectángulo es: " + longitud);
+
                     break;
                 case 3:
                     Triangulo();
@@ -70,6 +68,9 @@ public final class Menu_Figuras {
 
         area = base * altura;
         longitud = 2 * base + 2 * altura;
+
+        System.out.println("\nEl área del rectángulo es: " + area);
+        System.out.println("La longitud del rectángulo es: " + longitud);
     }
 
     public void Cuadrado() {
@@ -80,9 +81,12 @@ public final class Menu_Figuras {
 
         area = Math.pow(base, 2);
         longitud = base * 4;
+
+        System.out.println("\nEl área del rectángulo es: " + area);
+        System.out.println("La longitud del rectángulo es: " + longitud);
     }
 
-    public double Triangulo() {
+    public void Triangulo() {
 
         System.out.print("\nIntroduce la base: ");
         base = tec.nextDouble();
@@ -94,9 +98,6 @@ public final class Menu_Figuras {
 
         area = base * altura / 2;
         System.out.println("El área del triángulo es: " + area);
-
-        return area;
-
     }
 
     public static void main(String[] args) {
