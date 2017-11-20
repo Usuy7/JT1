@@ -1,4 +1,5 @@
 package P3_1;
+
 import Metodos.Metodos;
 import java.util.Scanner;
 
@@ -15,82 +16,124 @@ public class Number_Series {
 
     Scanner tec = new Scanner(System.in);
     int num;
-    String secuencia = "", positivos = "", negativos = "", pares = "", impares = "", primos = "", nprimos = "", perfectos = "", nperfectos = "", amigos = "";
-    int contPosi = 0, contNega = 0, contPar = 0, contImP = 0, contPrim = 0, contNPrim = 0, contPerfct = 0, contNPerfct = 0, contFriends = 0;
-    int sumPosi = 0, sumNega = 0, sumPar = 0, sumImP = 0, sumPrim = 0, sumNPrim = 0, sumPerfct = 0, sumNPerfct = 0, sumFriends = 0;
-    float medPosi = 0,  medNega = 0,  medPar = 0,  medImP = 0,  medPrim = 0,  medNPrim = 0,  medPerfct = 0,  medNPerfct = 0,  medFriends = 0;
-    float porcentPosi = 0,  porcentNega = 0,  porcentPar = 0, porcentImP = 0,  porcentPrim = 0, porcentNPrim = 0,  porcentPerfct = 0,  porcentNPerfct = 0,  porcentFriends = 0;
-    
+    String secuencia = "", positivos = "", negativos = "", pares = "", impares = "", primos = "", nprimos = "", perfectos = "", nperfectos = "";
+    int cont = 0, contPosi = 0, contNega = 0, contPar = 0, contImP = 0, contPrim = 0, contNPrim = 0, contPerfct = 0, contNPerfct = 0;
+    int sumPosi = 0, sumNega = 0, sumPar = 0, sumImP = 0, sumPrim = 0, sumNPrim = 0, sumPerfct = 0, sumNPerfct = 0;
+    float medPosi = 0, medNega = 0, medPar = 0, medImP = 0, medPrim = 0, medNPrim = 0, medPerfct = 0, medNPerfct = 0;
+    float porcentPosi = 0, porcentNega = 0, porcentPar = 0, porcentImP = 0, porcentPrim = 0, porcentNPrim = 0, porcentPerfct = 0, porcentNPerfct = 0;
+
     public Number_Series() {
         Read();
         Return();
     }
-    
-    public void Read(){
+
+    public void Read() {
         System.out.print("Introduce los números: ");
         do {
             num = tec.nextInt();
             secuencia += " " + num;
-            
+
+            if (num > 0) {
+                positivos += " " + num;
+                contPosi++;
+                sumPosi += num;
+            }
+
+            if (num < 0) {
+                negativos += " " + num;
+                contNega++;
+                sumNega += num;
+            }
+
+            if (num % 2 == 0) {
+                pares += " " + num;
+                contPar++;
+                sumPar += num;
+            } else {
+                impares += " " + num;
+                contImP++;
+                sumImP += num;
+            }
+
+            boolean primo = (num != 0);
+            primo = Metodos.esPrimo(num);
+
+            if (primo) {
+                primos += " " + num;
+                contPrim++;
+                sumPrim += num;
+            } else {
+                nprimos += " " + num;
+                contNPrim++;
+                sumNPrim += num;
+            }
+
+            boolean perfecto = (num != 0);
+            perfecto = Metodos.esPerfecto(num);
+
+            if (perfecto) {
+                perfectos += " " + num;
+                contPerfct++;
+                sumPerfct += num;
+            } else {
+                nperfectos += " " + num;
+                contNPerfct++;
+                sumNPerfct += num;
+            }
         } while (num != 0);
     }
-    
-    public void Return(){
-        System.out.println("Los números a evaluar son:" + secuencia);
-        
-        System.out.println("Números Positivos" + "\n" + secuencia);
-        System.out.println("Cantidad: " + secuencia);
-        System.out.println("Suma: " + secuencia);
-        System.out.println("Media: " + secuencia);
-        System.out.println("%:" + secuencia);
-        
-        System.out.println("Números Negativos" + "\n" + secuencia);
-        System.out.println("Cantidad: " + secuencia);
-        System.out.println("Suma: " + secuencia);
-        System.out.println("Media: " + secuencia);
-        System.out.println("%:" + secuencia);
-        
-        System.out.println("Números Pares" + "\n" + secuencia);
-        System.out.println("Cantidad: " + secuencia);
-        System.out.println("Suma: " + secuencia);
-        System.out.println("Media: " + secuencia);
-        System.out.println("%:" + secuencia);
-        
-        System.out.println("Números Impares" + "\n" + secuencia);
-        System.out.println("Cantidad: " + secuencia);
-        System.out.println("Suma: " + secuencia);
-        System.out.println("Media: " + secuencia);
-        System.out.println("%:" + secuencia);
-        
-        System.out.println("Números Primos" + "\n" + secuencia);
-        System.out.println("Cantidad: " + secuencia);
-        System.out.println("Suma: " + secuencia);
-        System.out.println("Media: " + secuencia);
-        System.out.println("%:" + secuencia);
-        
-        System.out.println("Números No Primos" + "\n" + secuencia);
-        System.out.println("Cantidad: " + secuencia);
-        System.out.println("Suma: " + secuencia);
-        System.out.println("Media: " + secuencia);
-        System.out.println("%:" + secuencia);
-        
-        System.out.println("Números Perfectos" + "\n" + secuencia);
-        System.out.println("Cantidad: " + secuencia);
-        System.out.println("Suma: " + secuencia);
-        System.out.println("Media: " + secuencia);
-        System.out.println("%:" + secuencia);
-        
-        System.out.println("Números No Perfectos" + "\n" + secuencia);
-        System.out.println("Cantidad: " + secuencia);
-        System.out.println("Suma: " + secuencia);
-        System.out.println("Media: " + secuencia);
-        System.out.println("%:" + secuencia);
-        
-        System.out.println("Números Amigos" + "\n" + secuencia);
-        System.out.println("Cantidad: " + secuencia);
-        System.out.println("Suma: " + secuencia);
-        System.out.println("Media: " + secuencia);
-        System.out.println("%:" + secuencia);
+
+    public void Return() {
+        System.out.println("\nLos números a evaluar son:" + secuencia);
+
+        System.out.println("\nNúmeros Positivos" + "\n" + positivos);
+        System.out.println("Cantidad: " + contPosi);
+        System.out.println("Suma: " + sumPosi);
+        System.out.println("Media: " + (medPosi = sumPosi / contPosi));
+        System.out.println("%: " + porcentPosi);
+
+        System.out.println("\nNúmeros Negativos" + "\n" + negativos);
+        System.out.println("Cantidad: " + contNega);
+        System.out.println("Suma: " + sumNega);
+        System.out.println("Media: " + (medNega = sumNega / contNega));
+        System.out.println("%: " + porcentNega);
+
+        System.out.println("\nNúmeros Pares" + "\n" + pares);
+        System.out.println("Cantidad: " + contPar);
+        System.out.println("Suma: " + sumPar);
+        System.out.println("Media: " + (medPar = sumPar / contPar));
+        System.out.println("%: " + porcentPar);
+
+        System.out.println("\nNúmeros Impares" + "\n" + impares);
+        System.out.println("Cantidad: " + contImP);
+        System.out.println("Suma: " + sumImP);
+        System.out.println("Media: " + medImP);
+        System.out.println("%: " + porcentImP);
+
+        System.out.println("\nNúmeros Primos" + "\n" + primos);
+        System.out.println("Cantidad: " + contPrim);
+        System.out.println("Suma: " + sumPrim);
+        System.out.println("Media: " + (medPrim = sumPrim / contPrim));
+        System.out.println("%: " + porcentPrim);
+
+        System.out.println("\nNúmeros No Primos" + "\n" + nprimos);
+        System.out.println("Cantidad: " + contNPrim);
+        System.out.println("Suma: " + sumNPrim);
+        System.out.println("Media: " + (medNPrim = sumNPrim / contNPrim));
+        System.out.println("%: " + porcentNPrim);
+
+        System.out.println("\nNúmeros Perfectos" + "\n" + perfectos);
+        System.out.println("Cantidad: " + contPerfct);
+        System.out.println("Suma: " + sumPerfct);
+        System.out.println("Media: " + (medPerfct = sumPerfct / contPerfct));
+        System.out.println("%: " + porcentPerfct);
+
+        System.out.println("\nNúmeros No Perfectos" + "\n" + nperfectos);
+        System.out.println("Cantidad: " + contNPerfct);
+        System.out.println("Suma: " + sumNPerfct);
+        System.out.println("Media: " + (medNPerfct = sumNPerfct / contNPerfct));
+        System.out.println("%: " + porcentPerfct);
+
     }
 
     public static void main(String[] args) {

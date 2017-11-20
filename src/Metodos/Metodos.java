@@ -59,6 +59,24 @@ public class Metodos {
         }
         return primo;
     }
+    
+    public static boolean esPerfecto(int num) {
+
+        int suma = 0;
+        boolean perfecto = false;
+
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                suma += i;
+            }
+        }
+        if (num == suma) {
+            perfecto = true;
+        } else {
+            perfecto = false;
+        }
+        return perfecto;
+    }
 
     public static int SumaDivisores(int num) {
 
@@ -106,7 +124,6 @@ public class Metodos {
                 }
             }
         }
-
         return numbers;
     }
 }
