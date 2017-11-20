@@ -1,5 +1,5 @@
 package P3_1;
-
+import Metodos.Metodos;
 import java.util.Scanner;
 
 /**
@@ -45,11 +45,7 @@ public class Perfect_Numbers {
 
         System.out.print("Introduce el número a comprobar: ");
         num = tec.nextInt();
-
-        while (num <= 0) {
-            System.out.println("El número introducido no es válido, introduce otro: ");
-            num = tec.nextInt();
-        }
+        num = Metodos.MayorCero(num);
 
         divisores = Divisors(num, divisores);
         suma = Sum(num, suma);

@@ -1,5 +1,5 @@
 package P3_1;
-
+import Metodos.Metodos;
 import java.util.Scanner;
 
 /**
@@ -18,13 +18,9 @@ public class Divisors_Sum {
 
         System.out.print("Introduce un número: ");
         int num = tec.nextInt();
+        num = Metodos.MayorCero(num);
 
-        while (num <= 0) {
-            System.out.print("El número introducido no es válido, introduce otro: ");
-            num = tec.nextInt();
-        }
-
-        for (int i = 1; i < num; i++) {
+        for (int i = 1; i <= num; i++) {
             if (num % i == 0) {
                 suma += i;
                 numbers = numbers + " " + Integer.toString(i);

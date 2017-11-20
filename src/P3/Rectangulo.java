@@ -1,5 +1,5 @@
 package P3;
-
+import Metodos.Metodos;
 import java.util.Scanner;
 
 /**
@@ -21,19 +21,11 @@ public class Rectangulo {
         
         System.out.println("Introduce la base: ");
         base = tec.nextInt();
-        
-        while (base <= 0) {
-            System.out.print("El número introducido no es válido, introduce otro: ");
-            base = tec.nextInt();
-        }
+        base = Metodos.MayorCero(base);
         
         System.out.println("Introduce la altura: ");
         altura = tec.nextInt();
-        
-        while (altura <= 0) {
-            System.out.print("El número introducido no es válido, introduce otro: ");
-            altura = tec.nextInt();
-        }
+        altura = Metodos.MayorCero(base);
         
         System.out.println("");
         
