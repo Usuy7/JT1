@@ -32,6 +32,7 @@ public class Number_Series {
         do {
             num = tec.nextInt();
             secuencia += " " + num;
+            cont++;
 
             if (num > 0) {
                 positivos += " " + num;
@@ -90,49 +91,49 @@ public class Number_Series {
         System.out.println("Cantidad: " + contPosi);
         System.out.println("Suma: " + sumPosi);
         System.out.println("Media: " + (medPosi = sumPosi / contPosi));
-        System.out.println("%: " + porcentPosi);
+        System.out.println("%: " + (porcentPosi = contPosi / cont * 100));
 
         System.out.println("\nNúmeros Negativos" + "\n" + negativos);
         System.out.println("Cantidad: " + contNega);
         System.out.println("Suma: " + sumNega);
         System.out.println("Media: " + (medNega = sumNega / contNega));
-        System.out.println("%: " + porcentNega);
+        System.out.println("%: " + (porcentNega = contNega / cont * 100));
 
         System.out.println("\nNúmeros Pares" + "\n" + pares);
         System.out.println("Cantidad: " + contPar);
         System.out.println("Suma: " + sumPar);
         System.out.println("Media: " + (medPar = sumPar / contPar));
-        System.out.println("%: " + porcentPar);
+        System.out.println("%: " + (porcentPar = contPar / cont * 100));
 
         System.out.println("\nNúmeros Impares" + "\n" + impares);
         System.out.println("Cantidad: " + contImP);
         System.out.println("Suma: " + sumImP);
         System.out.println("Media: " + medImP);
-        System.out.println("%: " + porcentImP);
+        System.out.println("%: " + (porcentImP = contImP / cont * 100));
 
         System.out.println("\nNúmeros Primos" + "\n" + primos);
         System.out.println("Cantidad: " + contPrim);
         System.out.println("Suma: " + sumPrim);
         System.out.println("Media: " + (medPrim = sumPrim / contPrim));
-        System.out.println("%: " + porcentPrim);
+        System.out.println("%: " + (porcentPrim = contPrim / cont * 100));
 
         System.out.println("\nNúmeros No Primos" + "\n" + nprimos);
         System.out.println("Cantidad: " + contNPrim);
         System.out.println("Suma: " + sumNPrim);
         System.out.println("Media: " + (medNPrim = sumNPrim / contNPrim));
-        System.out.println("%: " + porcentNPrim);
+        System.out.println("%: " + (porcentNPrim = contNPrim / cont * 100));
 
         System.out.println("\nNúmeros Perfectos" + "\n" + perfectos);
         System.out.println("Cantidad: " + contPerfct);
         System.out.println("Suma: " + sumPerfct);
         System.out.println("Media: " + (medPerfct = sumPerfct / contPerfct));
-        System.out.println("%: " + porcentPerfct);
+        System.out.println("%: " + (porcentPerfct = contPerfct / cont * 100));
 
         System.out.println("\nNúmeros No Perfectos" + "\n" + nperfectos);
         System.out.println("Cantidad: " + contNPerfct);
         System.out.println("Suma: " + sumNPerfct);
         System.out.println("Media: " + (medNPerfct = sumNPerfct / contNPerfct));
-        System.out.println("%: " + porcentPerfct);
+        System.out.println("%: " + (porcentPerfct = contNPerfct / cont * 100));
 
     }
 
