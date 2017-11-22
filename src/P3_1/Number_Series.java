@@ -98,6 +98,13 @@ public final class Number_Series {
                 sumNPerfct += num;
             }
             num = tec.nextInt();
+            nume = Integer.toString(num);
+            
+            while (nume.equals("") || nume.equals(" ")) {
+                System.out.print("Introduce algún número: ");
+                nume = tec.nextLine();
+            }
+            num = Integer.parseInt(nume);
         }
     }
 
