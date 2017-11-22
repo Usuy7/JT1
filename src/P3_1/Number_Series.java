@@ -16,6 +16,7 @@ public class Number_Series {
 
     Scanner tec = new Scanner(System.in);
     int num;
+    String nume = " ";
     String secuencia = "", positivos = "", negativos = "", pares = "", impares = "", primos = "", nprimos = "", perfectos = "", nperfectos = "";
     int cont = 0, contPosi = 0, contNega = 0, contPar = 0, contImP = 0, contPrim = 0, contNPrim = 0, contPerfct = 0, contNPerfct = 0;
     int sumPosi = 0, sumNega = 0, sumPar = 0, sumImP = 0, sumPrim = 0, sumNPrim = 0, sumPerfct = 0, sumNPerfct = 0;
@@ -29,8 +30,23 @@ public class Number_Series {
 
     public void Read() {
         System.out.print("Introduce los números: ");
-        do {
-            num = tec.nextInt();
+        nume = tec.nextLine();
+
+        while (nume.equals("") || nume.equals(" ")) {
+            System.out.print("Introduce algún número: ");
+            nume = tec.nextLine();
+        }
+
+        num = Integer.parseInt(nume);
+
+        if (num == 0) {
+            while (num == 0) {
+                System.out.print("Introduce un número distinto de 0: ");
+                num = tec.nextInt();
+            }
+        }
+
+        while (num != 0) {
             secuencia += " " + num;
             cont++;
 
@@ -81,12 +97,12 @@ public class Number_Series {
                 contNPerfct++;
                 sumNPerfct += num;
             }
-        } while (num != 0);
+            num = tec.nextInt();
+        }
     }
 
     public void Return() {
         System.out.println("\nLos números a evaluar son:" + secuencia);
-
         System.out.println("\nNúmeros Positivos" + "\n" + positivos);
         System.out.println("Cantidad: " + contPosi);
         System.out.println("Suma: " + sumPosi);
