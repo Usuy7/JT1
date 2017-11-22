@@ -12,14 +12,14 @@ Algoritmo que capture una serie de números y que cuente y sume por separado, lo
 los negativos, los primos y los perfectos. Teniendo en cuenta que un número puede cumplir a la vez varias de las 
 condiciones anteriores, (2 es par y primo ). El cero finaliza la serie.
  */
-public class Number_Series {
+public final class Number_Series {
 
     Scanner tec = new Scanner(System.in);
     int num;
     String nume = " ";
     String secuencia = "", positivos = "", negativos = "", pares = "", impares = "", primos = "", nprimos = "", perfectos = "", nperfectos = "";
-    int cont = 0, contPosi = 0, contNega = 0, contPar = 0, contImP = 0, contPrim = 0, contNPrim = 0, contPerfct = 0, contNPerfct = 0;
-    int sumPosi = 0, sumNega = 0, sumPar = 0, sumImP = 0, sumPrim = 0, sumNPrim = 0, sumPerfct = 0, sumNPerfct = 0;
+    float cont = 0, contPosi = 0, contNega = 0, contPar = 0, contImP = 0, contPrim = 0, contNPrim = 0, contPerfct = 0, contNPerfct = 0;
+    float sumPosi = 0, sumNega = 0, sumPar = 0, sumImP = 0, sumPrim = 0, sumNPrim = 0, sumPerfct = 0, sumNPerfct = 0;
     float medPosi = 0, medNega = 0, medPar = 0, medImP = 0, medPrim = 0, medNPrim = 0, medPerfct = 0, medNPerfct = 0;
     float porcentPosi = 0, porcentNega = 0, porcentPar = 0, porcentImP = 0, porcentPrim = 0, porcentNPrim = 0, porcentPerfct = 0, porcentNPerfct = 0;
 
@@ -124,7 +124,7 @@ public class Number_Series {
         System.out.println("\nNúmeros Impares" + "\n" + impares);
         System.out.println("Cantidad: " + contImP);
         System.out.println("Suma: " + sumImP);
-        System.out.println("Media: " + medImP);
+        System.out.println("Media: " + (medImP = sumImP / contImP));
         System.out.println("%: " + (porcentImP = contImP / cont * 100));
 
         System.out.println("\nNúmeros Primos" + "\n" + primos);
