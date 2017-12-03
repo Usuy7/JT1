@@ -19,11 +19,11 @@ public class Rectangulo {
         
         int base, altura;
         
-        System.out.println("Introduce la base: ");
+        System.out.print("Introduce la base: ");
         base = tec.nextInt();
         base = Metodos.MayorCero(base);
         
-        System.out.println("Introduce la altura: ");
+        System.out.print("Introduce la altura: ");
         altura = tec.nextInt();
         altura = Metodos.MayorCero(base);
         
