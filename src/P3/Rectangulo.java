@@ -25,7 +25,7 @@ public class Rectangulo {
         
         System.out.print("Introduce la altura: ");
         altura = tec.nextInt();
-        altura = Metodos.MayorCero(base);
+        altura = Metodos.MayorCero(altura);
         
         System.out.println("");
         
