@@ -10,8 +10,7 @@ import java.util.Scanner;
 Escribe un programa en java que lea dígitos por teclado (de uno en uno) y termine cuando se
 introduzca un número negativo. Con esos dígitos ha de crear un número entero (entero largo, por si
 tiene muchas cifras) que tenga como unidad la primera de las cifras introducidas, como decena la
-segunda, y así sucesivamente. Al final sacará ese
-número por pantalla.
+segunda, y así sucesivamente. Al final sacará ese número por pantalla.
  */
 public class Number_Unity {
 
